@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVISEG - Reintegradora de Veículos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --cyan: #06b6d4;
+            --blue: #3b82f6;
+            --text-light: #f3f4f6;
+            --text-dim: #9ca3af;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+
+        .glow-bg {
+            position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+            width: 100vw; height: 100vh;
+            background: radial-gradient(circle at 50% 20%, rgba(6, 182, 212, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
+            z-index: -1; pointer-events: none;
+        }
+
+        header { padding: 2rem 1.5rem; text-align: center; border-bottom: 1px solid var(--card-border); }
+        .brand { font-size: 2.2rem; font-weight: 800; letter-spacing: 3px; background: linear-gradient(to right, #06b6d4, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .sub-brand { font-size: 0.85rem; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; }
+
+        .hero { max-width: 900px; margin: 4rem auto; text-align: center; padding: 0 1.5rem; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1.5rem; font-weight: 800; line-height: 1.2; }
+        .hero p { color: var(--text-dim); font-size: 1.2rem; margin-bottom: 2rem; }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover { border-color: rgba(6, 182, 212, 0.4); transform: translateY(-3px); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+
+        .icon-box { font-size: 2rem; color: var(--cyan); margin-bottom: 1rem; }
+
+        footer { background: #060911; border-top: 1px solid var(--card-border); padding: 4rem 1.5rem 2rem; margin-top: 4rem; }
+        .footer-wrapper { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+        
+        .footer-title { color: var(--cyan); font-size: 1.1rem; margin-bottom: 1.2rem; font-weight: 600; }
+        .contact-item { display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; color: var(--text-dim); text-decoration: none; transition: 0.2s; }
+        .contact-item:hover { color: var(--cyan); }
+
+        @media(max-width:768px) {
+            .hero h1 { font-size: 2rem; }
+            .glass-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <header>
+        <div class="brand">REVISEG</div>
+        <div class="sub-brand">Reintegradora de Veículos</div>
+    </header>
+
+    <section class="hero">
+        <h1>Inteligência e Agilidade na Recuperação de Patrimônio</h1>
+        <p>Serviços especializados em localização, apreensão e reintegração de veículos e máquinas oriundos de furtos/roubos.</p>
+    </section>
+
+    <div class="container">
+        <div class="glass-card">
+            <h2 style="color:var(--cyan); margin-bottom:1rem;"><i class="fa-solid fa-circle-info"></i> Sobre a Empresa</h2>
+            <p style="color: var(--text-dim); font-size: 1.05rem; margin-bottom: 1rem;">A REVISEG é uma empresa especializada na prestação de serviços de informação, localização e reintegração de posse de veículos e máquinas recuperados de furtos, roubos ou apropriação indébita. Nosso objetivo é conectar de forma ágil as autoridades competentes às Companhias Seguradoras e seus clientes, otimizando os prazos de recuperação antes ou depois do pagamento de indenizações.</p>
+            <p style="color: var(--text-dim); font-size: 1.05rem;">Ao reduzir o tempo de permanência dos bens em pátios e protegê-los da depreciação causada por intempéries, oferecemos uma assessoria técnica e inovadora que assegura a preservação do patrimônio e a eficiência operacional em cada etapa do processo, visando a reintegração rápida e segura do bem.</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="glass-card">
+                <div class="icon-box"><i class="fa-solid fa-car-burst"></i></div>
+                <h3>Redução de Sinistros</h3>
+                <p style="color:var(--text-dim); margin-top:0.5rem;">Informação precisa antes ou depois da indenização, auxiliando seguradoras na conservação e retorno do ativo.</p>
+            </div>
+            <div class="glass-card">
+                <div class="icon-box"><i class="fa-solid fa-gavel"></i></div>
+                <h3>Suporte Jurídico & Operacional</h3>
+                <p style="color:var(--text-dim); margin-top:0.5rem;">Acompanhamento completo de trâmites até a reintegração oficial de posse junto aos órgãos competentes.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div>
+                <div class="footer-title">REVISEG</div>
+                <p style="color:var(--text-dim);">Diretor: Richard William Vieira</p>
+                <p style="color:var(--text-dim); margin-top:0.5rem;">Atuação focada no cumprimento rigoroso de prazos e excelência operacional.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Atendimento</div>
+                <p style="color:var(--text-dim); margin-top:0.5rem; margin-bottom:1.0rem;">08:00 às 20:00 - Segunda a Sexta, horário de Brasília</p>
+                <a href="tel:31992998022" class="contact-item"><i class="fa-solid fa-phone"></i> (31) 99299-8022</a>
+                <a href="tel:3135867301" class="contact-item"><i class="fa-solid fa-phone"></i> (31) 3586-7301</a>
+                <a href="https://www.instagram.com/revisegbh/?hl=en" target="_blank" class="contact-item"><i class="fa-brands fa-instagram"></i> @revisegbh</a>
+            </div>
+            
+            <div>
+                <div class="footer-title">Localização</div>
+                <p style="color:var(--text-dim);">Av. Olinto Meireles, 2745 - Sala 9<br>Milionários - BH/MG<br>CEP: 30620-330</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Olinto+Meireles,+2745+-+Milionarios,+Belo+Horizonte+-+MG" target="_blank" class="contact-item" style="color:var(--cyan); margin-top:0.8rem;"><i class="fa-solid fa-map-location-dot"></i> Ver no Mapa</a>
+            </div>
+
+            <div>
+                <div class="footer-title">E-mails Oficiais</div>
+                <a href="mailto:contato@revisegbh.com.br" class="contact-item"><i class="fa-regular fa-envelope"></i> contato@revisegbh.com.br</a>
+                <a href="mailto:richard.contato@revisegbh.com.br" class="contact-item"><i class="fa-regular fa-envelope"></i> richard.contato@revisegbh.com.br</a>
+                <a href="mailto:t.contato@revisegbh.com.br" class="contact-item"><i class="fa-regular fa-envelope"></i> t.contato@revisegbh.com.br</a>
+                <a href="mailto:revisegbh@revisegbh.com.br" class="contact-item"><i class="fa-regular fa-envelope"></i> revisegbh@revisegbh.com.br</a>
+                <a href="mailto:revisegbh@gmail.com" class="contact-item"><i class="fa-regular fa-envelope"></i> revisegbh@gmail.com</a>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:3rem; color:var(--text-dim); font-size:0.85rem;">
+            &copy; REVISEG - revisegbh.com.br
+        </div>
+    </footer>
+</body>
+</html>
